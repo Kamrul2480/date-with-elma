@@ -7,7 +7,7 @@ const pages = [
   },
   {
     emoji: "😁",
-    question: "Do you like your senior?", // আপনার নাম বসান
+    question: "Do you like your senior KAMRUL?",
     subtext: "Be honest... 👀",
     no: "Hmm... think again 😄"
   },
@@ -48,7 +48,6 @@ const dateInput = document.getElementById("dateInput");
 const timeSelect = document.getElementById("timeSelect");
 const confirmDateBtn = document.getElementById("confirmDateBtn");
 
-// আজকের আগের তারিখ নির্বাচন বন্ধ করা
 const today = new Date().toISOString().split("T")[0];
 dateInput.min = today;
 
@@ -94,7 +93,7 @@ function showFinal() {
   emoji.textContent = "🥰";
   pageCount.textContent = "❤️";
   question.textContent = "Yay! It's a Date! ❤️";
-  subtext.textContent = "কাচ্চি ডেটের জন্য তারিখ ও সময় সিলেক্ট করুন! 🍛☕✨";
+  subtext.textContent = "Pick a date & time for our kacchi date! 🍛☕✨";
   buttons.classList.add("hidden");
   datePickerContainer.classList.remove("hidden");
   burstHearts(22);
@@ -105,7 +104,7 @@ confirmDateBtn.addEventListener("click", () => {
   const selectedTime = timeSelect.value;
 
   if (!selectedDate || !selectedTime) {
-    message.textContent = "দয়া করে তারিখ ও সময় দুটোই সিলেক্ট করুন! 🗓️⏰";
+    message.textContent = "Please select both date and time! 🗓️⏰";
     return;
   }
 
